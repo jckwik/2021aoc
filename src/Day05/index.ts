@@ -2,10 +2,10 @@ import { readFileSync } from "fs";
 var file = readFileSync("input.txt", "utf8");
 var radarInput = file.split("\r\n");
 
-var startX = [];
-var startY = [];
-var endX = [];
-var endY = [];
+var startX = [] as number[];
+var startY = [] as number[];
+var endX = [] as number[];
+var endY = [] as number[];
 
 radarInput.forEach((line) => {
   var lineSplit = line.split(" -> ");
@@ -17,7 +17,7 @@ radarInput.forEach((line) => {
   endY.push(parseInt(ends[1]));
 });
 
-var radarGrid = [];
+var radarGrid = [] as number[][];
 for (var i = 0; i < 1000; i++) {
   radarGrid[i] = [];
   for (var j = 0; j < 1000; j++) {
